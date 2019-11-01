@@ -317,9 +317,17 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(max) {
+  
+  let count= 0;
+  return function counter(){
+    if( count > max ){
+      count= 0;
+    }
+    return count++;
+  }
 }
+
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
