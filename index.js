@@ -168,9 +168,23 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-}
+// const callback= function(arr){
+//   const deDuped= arr;
+//   for(let i=0; i < deDuped.length; i++){
+//     let checkCurr= deDuped[i];
+//     for( let j= 1; j < deDuped.length; j++ ){
+//       if( checkCurr === deDuped[j] ){
+//         deDuped.splice(j, 1);
+//       }// end if
+//     }//end inner for
+//   }//end for
+//   return deDuped;
+// }
+
+function processDuplicateFree(list, callback) {
+
+
+}//end func
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -190,8 +204,13 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  const namesArray= [];
+  runners.forEach(runner => {
+    let curr= runner.last_name+", "+runner.first_name;
+    namesArray.push(curr);
+  });
+  return namesArray;
 }
 
 /**
